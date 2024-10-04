@@ -39,6 +39,11 @@ def main():
     ran_list = sorted(ran_list)
 
     df2 = df.iloc[ran_list]
+
+    path2= path.partition(".")
+    print(fr"{path2[0]}-Random-{today}.xlsx")
+
+    # df2.to_excel(f"{path2[0]}-Random-{today}.xlsx",sheet_name='Sheet_1') 
     
 
 
