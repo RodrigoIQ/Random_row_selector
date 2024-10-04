@@ -22,6 +22,13 @@ def main():
     i = 1 
     for sheet in sheet_namess:
         print(f"{i} = {sheet}, ", end = "")
+        i = i+1
+    
+    print("\n")
+
+    Sheet_Num = int(input("Please select sheet number: "))
+    Sheet_Num = Sheet_Num-1
+    print(sheet_namess[Sheet_Num])
 
 if __name__ == "__main__":
     main()
