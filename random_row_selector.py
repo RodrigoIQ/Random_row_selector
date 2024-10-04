@@ -17,10 +17,10 @@ def main():
 
     #get excel file
     original_file = pd.ExcelFile(path)
-    sheet_namess= original_file.sheet_names
+    sheet_names= original_file.sheet_names
 
     i = 1 
-    for sheet in sheet_namess:
+    for sheet in sheet_names:
         print(f"{i} = {sheet}, ", end = "")
         i = i+1
     
@@ -28,7 +28,7 @@ def main():
 
     Sheet_Num = int(input("Please select sheet number: "))
     Sheet_Num = Sheet_Num-1
-    print(sheet_namess[Sheet_Num])
+    print(sheet_names[Sheet_Num])
 
 if __name__ == "__main__":
     main()
