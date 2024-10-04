@@ -30,5 +30,17 @@ def main():
     Sheet_Num = Sheet_Num-1
     print(sheet_names[Sheet_Num])
 
+    # get data from excel sheet 
+    df = pd.read_excel (path,sheet_name=sheet_names[Sheet_Num])
+    print(f"Universe size = {df.shape[0]}")
+    Sample_sizes = int(input("Sample size: "))
+
+    ran_list = random.sample(range(df.shape[0]),k = Sample_sizes)
+    ran_list = sorted(ran_list)
+
+    df2 = df.iloc[ran_list]
+    
+
+
 if __name__ == "__main__":
     main()
